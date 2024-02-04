@@ -1,0 +1,16 @@
+body {
+    background-image:  url("background.png");
+}
+p {
+    font-size: 20px;
+}
+h1 {
+    font-size: 24px;
+    text-align: center;
+}
+.photo {
+    text-align: center;
+}
+.video {
+    text-align: center;
+}
