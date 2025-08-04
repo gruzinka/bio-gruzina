@@ -3,61 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мои устройства</title>
+    <title>Мои устройства — DLLHostExe</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Подключаем Font Awesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <header>
+    <!-- Хедер -->
+    <header style="
+        text-align: center;
+        margin: 20px auto;
+        padding: 12px 0;
+        width: 100%;
+        max-width: 900px;
+        border-bottom: 1px solid #4fc3f7;
+        position: relative;
+        z-index: 2;
+    ">
         <nav>
-            <a href="index.html"><i class="fas fa-home"></i> Главная</a>
-            <a href="tools.html"><i class="fas fa-wrench"></i> Утилиты</a>
-            <a href="devices.html"><i class="fas fa-laptop"></i> Устройства</a>
+            <a href="index.html" style="color: #4fc3f7; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 18px;">🏠 Главная</a>
+            <a href="tools.html" style="color: #4fc3f7; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 18px;">🔧 Утилиты</a>
+            <a href="devices.html" style="color: #4fc3f7; margin: 0 15px; text-decoration: none; font-weight: bold; font-size: 18px;">🛠️ Устройства</a>
         </nav>
     </header>
 
-    <main>
+    <main style="max-width: 900px; margin: 0 auto; padding: 0 15px;">
         <h1>🛠️ Мои устройства</h1>
         <p>Вот 5 устройств, которые я использую каждый день или по необходимости.</p>
 
-        <div class="device-container">
-            <!-- Карточка 1 -->
+        <!-- Сетка 2x2 + 1 -->
+        <div class="device-grid">
             <div class="device-card">
-                <h2><i class="fas fa-mobile-alt"></i> Xiaomi Redmi Note 10 (Android)</h2>
+                <h3>📱 Xiaomi Redmi Note 10 (Android)</h3>
                 <p>Мой основной телефон. Использую для обхода блокировок через Magisk + zapret.</p>
                 <p><strong>ОС:</strong> Android 13 (MIUI)</p>
                 <p><strong>Особенности:</strong> Root, AdAway, Termux</p>
             </div>
 
-            <!-- Карточка 2 -->
             <div class="device-card">
-                <h2><i class="fas fa-desktop"></i> Домашний ПК (Windows)</h2>
+                <h3>💻 Домашний ПК (Windows)</h3>
                 <p>Старенький, но верный. Запускаю виртуалки и тестирую софт.</p>
                 <p><strong>Процессор:</strong> Intel Core i3-4170</p>
                 <p><strong>ОЗУ:</strong> 8 ГБ</p>
                 <p><strong>ОС:</strong> Windows 10 Pro (активирован через MAS)</p>
             </div>
 
-            <!-- Карточка 3 -->
             <div class="device-card">
-                <h2><i class="fas fa-laptop"></i> Ноутбук (Linux)</h2>
+                <h3>🖥️ Ноутбук (Linux)</h3>
                 <p>Бывший в употреблении, но отлично работает под Linux.</p>
                 <p><strong>Модель:</strong> Lenovo ThinkPad T440p</p>
                 <p><strong>ОС:</strong> Ubuntu 22.04 LTS</p>
                 <p><strong>Использую для:</strong> Терминал, скрипты, SSH, Warp Dev</p>
             </div>
 
-            <!-- Карточка 4 -->
             <div class="device-card">
-                <h2><i class="fas fa-raspberry-pi"></i> Raspberry Pi 3B+</h2>
+                <h3>🎮 Raspberry Pi 3B+</h3>
                 <p>Мой мини-сервер для экспериментов.</p>
                 <p><strong>Запущено:</strong> Pi-hole, запрет-дискорд-ютуб</p>
                 <p><strong>ОС:</strong> Raspberry Pi OS (headless)</p>
                 <p><strong>Доступ:</strong> По SSH с любого устройства</p>
             </div>
 
-            <!-- Карточка 5 -->
-            <div class="device-card">
-                <h2><i class="fas fa-headphones-alt"></i> Наушники с шумоподавлением</h2>
+            <!-- Пятая карточка — на всю ширину -->
+            <div class="device-card full-width">
+                <h3>🎧 Наушники с шумоподавлением</h3>
                 <p>Помогают сосредоточиться.</p>
                 <p><strong>Модель:</strong> Realme Buds Air 3</p>
                 <p><strong>Функции:</strong> ANC, Bluetooth 5.2, IPX5</p>
@@ -65,5 +75,9 @@
             </div>
         </div>
     </main>
+
+    <footer style="text-align: center; margin-top: 50px; color: #aaa; font-size: 14px;">
+        Copyleft (c) 2009 DLLHostExe. Все права отобраны.
+    </footer>
 </body>
 </html>
