@@ -109,7 +109,7 @@ a:hover {
         width: 100%;
         max-width: 560px;
     }
-} /* <-- ЭТОЙ СКОБКИ НЕ ХВАТАЛО! */
+}
 
 /* Стили для страницы с утилитами */
 .tool-card {
@@ -183,7 +183,22 @@ a:hover {
     line-height: 1.7;
     color: #eeeeee;
     margin: 10px 0;
-    }
 }
 
+/* Сетка для устройств: 2 в строку */
+.device-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
 
+.device-grid .device-card {
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+.device-card.full-width {
+    flex-basis: 100%;
+}
