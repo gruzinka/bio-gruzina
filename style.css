@@ -184,7 +184,6 @@ a:hover {
     color: #eeeeee;
     margin: 10px 0;
 }
-
 /* Сетка для устройств: 2 в строку */
 .device-grid {
     display: flex;
@@ -202,3 +201,28 @@ a:hover {
 .device-card.full-width {
     flex-basis: 100%;
 }
+/* Стили для контейнера устройств */
+.device-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Расстояние между карточками */
+}
+
+/* Стили для каждой карточки устройства */
+.device-card {
+    background-color: #222;
+    border-radius: 8px;
+    padding: 15px;
+    width: calc(50% - 20px); /* Устанавливаем ширину в 50%, минус расстояние между карточками */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Текст внутри карточки выровнен по левому краю */
+}
+
+/* Адаптивность: на экранах ≤600px — одна карточка в строке */
+@media (max-width: 600px) {
+    .device-card {
+        width: 100%; /* На мобильных — одна карточка в строке */
+    }
+}
+
