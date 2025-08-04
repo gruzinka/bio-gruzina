@@ -152,7 +152,9 @@ a:hover {
     .tool-card {
         max-width: 100%;
         text-align: center;
+    }
 }
+
 /* Стили для карточек устройств */
 .device-card {
     background-color: rgba(0, 0, 0, 0.5);
@@ -183,4 +185,5 @@ a:hover {
     margin: 10px 0;
     }
 }
+
 
