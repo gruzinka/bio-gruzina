@@ -109,6 +109,8 @@ a:hover {
         width: 100%;
         max-width: 560px;
     }
+} /* <-- ЭТОЙ СКОБКИ НЕ ХВАТАЛО! */
+
 /* Стили для страницы с утилитами */
 .tool-card {
     background-color: rgba(0, 0, 0, 0.5);
@@ -118,7 +120,7 @@ a:hover {
     max-width: 700px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s;
-    text-align: center; /* Центрируем текст внутри контейнера */
+    text-align: center;
 }
 
 .tool-card:hover {
@@ -129,32 +131,26 @@ a:hover {
 .tool-card h3 {
     margin-top: 0;
     color: #4fc3f7;
-    text-align: center; /* Центрируем заголовки */
+    text-align: center;
 }
 
 .tool-card p {
     font-size: 18px;
     margin: 10px 0;
-    text-align: center; /* Центрируем параграфы */
+    text-align: center;
 }
 
 .tool-card a {
     color: #4fc3f7;
     text-decoration: none;
     font-weight: bold;
-    text-align: center; /* Центрируем ссылки */
+    text-align: center;
 }
 
 /* Адаптивность: на маленьких экранах */
 @media (max-width: 600px) {
     .tool-card {
         max-width: 100%;
-        text-align: center; /* Перезадаем центрирование */
-    }
-
-    .tool-card h3,
-    .tool-card p,
-    .tool-card a {
-        text-align: center; /* Убедимся, что все элементы остаются центрированными */
+        text-align: center;
     }
 }
