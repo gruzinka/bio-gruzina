@@ -152,5 +152,35 @@ a:hover {
     .tool-card {
         max-width: 100%;
         text-align: center;
+}
+/* Стили для карточек устройств */
+.device-card {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 18px;
+    margin: 20px auto;
+    max-width: 700px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, background-color 0.3s;
+    text-align: center;
+}
+
+.device-card:hover {
+    transform: scale(1.03);
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.device-card h3 {
+    margin-top: 0;
+    color: #80deea;
+    font-size: 20px;
+}
+
+.device-card p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #eeeeee;
+    margin: 10px 0;
     }
 }
+
