@@ -7,66 +7,72 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- Хедер (шапка сайта) -->
-<header style="text-align: center; margin: 20px 0; padding: 10px 0; border-bottom: 1px solid #4fc3f7; width: 100%;">
-    <nav>
-        <a href="index.html" style="color: #4fc3f7; text-decoration: none; margin: 0 15px; font-weight: bold;">🏠 Главная</a>
-        <a href="tools.html" style="color: #4fc3f7; text-decoration: none; margin: 0 15px; font-weight: bold;">🔧 Eblan рекомендует</a>
-        <a href="devices.html" style="color: #4fc3f7; text-decoration: none; margin: 0 15px; font-weight: bold;">🛠️ Устройства</a>
-    </nav>
-</header>
-    <h1>🛠️ Мои устройства</h1>
-    
-    <div class="device-card">
-        <h3>💻 Настольный ПК (рабочая лошадка)</h3>
-        <p>
-            Мощная сборка для работы с виртуалками, кодом и рендерингом.<br>
-            <strong>Процессор:</strong> Intel Core i7-10700K<br>
-            <strong>ОЗУ:</strong> 32 ГБ DDR4<br>
-            <strong>Видеокарта:</strong> NVIDIA RTX 3060<br>
-            <strong>ОС:</strong> Windows 11 Pro
-        </p>
-    </div>
+    <!-- Хедер с навигацией -->
+    <header style="text-align: center; margin: 20px 0; padding: 10px 0; border-bottom: 1px solid #4fc3f7;">
+        <nav>
+            <a href="index.html" style="color: #4fc3f7; margin: 0 15px; text-decoration: none; font-weight: bold;">🏠 Главная</a>
+            <a href="tools.html" style="color: #4fc3f7; margin: 0 15px; text-decoration: none; font-weight: bold;">🔧 Утилиты</a>
+            <a href="devices.html" style="color: #4fc3f7; margin: 0 15px; text-decoration: none; font-weight: bold;">🛠️ Устройства</a>
+        </nav>
+    </header>
 
-    <div class="device-card">
-        <h3>🖥️ Ноутбук (для поездок)</h3>
-        <p>
-            Лёгкий и надёжный — беру с собой везде.<br>
-            <strong>Модель:</strong> Lenovo ThinkPad X1 Carbon<br>
-            <strong>Год:</strong> 2020<br>
-            <strong>ОС:</strong> Windows 10 + Ubuntu (двойная загрузка)
-        </p>
-    </div>
+    <main style="max-width: 900px; margin: 0 auto; padding: 0 15px;">
+        <h1>🛠️ Мои устройства</h1>
+        <p>Вот 5 устройств, которые я использую каждый день или по необходимости.</p>
 
-    <div class="device-card">
-        <h3>📱 Смартфон (основной)</h3>
-        <p>
-            Использую для связи, заметок и тестирования приложений.<br>
-            <strong>Модель:</strong> Samsung Galaxy S21<br>
-            <strong>ОС:</strong> Android 13<br>
-            <strong>Особенности:</strong> Root, ADB, Termux
-        </p>
-    </div>
+        <!-- Сетка из 2 колонок -->
+        <div class="device-grid">
+            <div class="device-card">
+                <h3>📱 Xiaomi Redmi Note 10 (Android)</h3>
+                <p>
+                    Мой основной телефон. Использую для обхода блокировок через Magisk + zapret.<br>
+                    <strong>ОС:</strong> Android 13 (MIUI)<br>
+                    <strong>Особенности:</strong> Root, AdAway, Termux
+                </p>
+            </div>
 
-    <div class="device-card">
-        <h3>🔧 Рабочая станция Raspberry Pi</h3>
-        <p>
-            Маленький сервер для домашней автоматизации и тестов.<br>
-            <strong>Модель:</strong> Raspberry Pi 4 (8 ГБ)<br>
-            <strong>Запущено:</strong> Pi-hole, AdGuard, MiniDLNA<br>
-            <strong>ОС:</strong> Raspberry Pi OS (headless)
-        </p>
-    </div>
+            <div class="device-card">
+                <h3>💻 Домашний ПК (Windows)</h3>
+                <p>
+                    Старенький, но верный. Запускаю виртуалки и тестирую софт.<br>
+                    <strong>Процессор:</strong> Intel Core i3-4170<br>
+                    <strong>ОЗУ:</strong> 8 ГБ<br>
+                    <strong>ОС:</strong> Windows 10 Pro (активирован через MAS)
+                </p>
+            </div>
 
-    <div class="device-card">
-        <h3>🎧 Наушники-спутники</h3>
-        <p>
-            Для музыки, подкастов и долгих сессий.<br>
-            <strong>Модель:</strong> Sony WH-1000XM4<br>
-            <strong>Использование:</strong> Шумоподавление в метро и офисе<br>
-            <strong>Подключаются к:</strong> ПК, ноутбуку, телефону
-        </p>
-    </div>
+            <div class="device-card">
+                <h3>🖥️ Ноутбук (Linux)</h3>
+                <p>
+                    Бывший в употреблении, но отлично работает под Linux.<br>
+                    <strong>Модель:</strong> Lenovo ThinkPad T440p<br>
+                    <strong>ОС:</strong> Ubuntu 22.04 LTS<br>
+                    <strong>Использую для:</strong> Терминал, скрипты, SSH, Warp Dev
+                </p>
+            </div>
+
+            <div class="device-card">
+                <h3>🎮 Raspberry Pi 3B+</h3>
+                <p>
+                    Мой мини-сервер для экспериментов.<br>
+                    <strong>Запущено:</strong> Pi-hole, запрет-дискорд-ютуб<br>
+                    <strong>ОС:</strong> Raspberry Pi OS (headless)<br>
+                    <strong>Доступ:</strong> По SSH с любого устройства
+                </p>
+            </div>
+
+            <!-- Пятая карточка — займёт всю ширину -->
+            <div class="device-card full-width">
+                <h3>🎧 Наушники с шумоподавлением</h3>
+                <p>
+                    Помогают сосредоточиться.<br>
+                    <strong>Модель:</strong> Realme Buds Air 3<br>
+                    <strong>Функции:</strong> ANC, Bluetooth 5.2, IPX5<br>
+                    <strong>Подключаются к:</strong> Телефону, ПК, ноутбуку
+                </p>
+            </div>
+        </div>
+    </main>
 
     <footer style="text-align: center; margin-top: 50px; color: #aaa; font-size: 14px;">
         Copyleft (c) 2009 DLLHostExe. Все права отобраны.
