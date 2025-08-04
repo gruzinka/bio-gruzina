@@ -1,91 +1,112 @@
 /* Общие настройки */
 body {
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f0f0;
+    color: #ffffff;
     margin: 0;
-    padding: 0;
-    color: #333;
+    padding: 20px;
+    line-height: 1.8;
+    min-height: 100vh;
 }
 
-header {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #333;
-    color: #fff;
+/* Затемнение фона, чтобы текст было видно */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
 }
 
-h1, h2 {
-    margin: 0;
-    padding: 0;
-}
-
+/* Заголовки */
 h1 {
     font-size: 28px;
-}
-
-h2 {
-    font-size: 24px;
-    margin-top: 30px;
-}
-
-/* Информационная секция */
-.info {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.info p {
-    font-size: 18px;
-    line-height: 1.6;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
     margin-bottom: 10px;
 }
 
-.info a {
-    color: #007bff;
+h2 {
+    font-size: 22px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    margin-top: 30px;
+}
+
+/* Основной текст */
+p {
+    font-size: 18px;
+    text-align: center;
+    max-width: 700px;
+    margin: 15px auto;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Ссылки */
+a {
+    color: #4fc3f7;
     text-decoration: none;
     font-weight: bold;
 }
 
-.info a:hover {
+a:hover {
     text-decoration: underline;
+    color: #0099cc;
 }
 
-/* Видео секция */
-.videos {
-    margin-top: 30px;
-}
-
+/* Контейнер для видео в строку */
 .video-row {
     display: flex;
-    gap: 20px; /* Расстояние между видео */
-    justify-content: center; /* Выравнивание по центру */
-    flex-wrap: wrap; /* Перенос на новую строку при необходимости */
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+    max-width: 1200px;
+    padding: 0 10px;
 }
 
-.video-container {
-    width: calc(50% - 10px); /* Уменьшаем ширину для двух видео */
-    margin-bottom: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Отдельное видео */
+.video-item {
+    flex: 1;
+    min-width: 560px;
+    max-width: 560px;
 }
 
-.video-container iframe {
+.video-item iframe {
     width: 100%;
     height: 315px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    border: none;
 }
 
-/* Адаптивность */
+/* Адаптивность: на маленьких экранах видео в столбик */
 @media (max-width: 600px) {
-    .info {
-        max-width: 90%;
+    h1 {
+        font-size: 24px;
     }
 
-    .video-container {
-        width: 100%; /* На мобильных устройствах видео занимают всю ширину */
+    p {
+        font-size: 16px;
+        padding: 8px 12px;
+    }
+
+    .video-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-item {
+        min-width: auto;
+        width: 100%;
+        max-width: 560px;
     }
 }
